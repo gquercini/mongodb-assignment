@@ -1,4 +1,24 @@
-# Lab. Assignment --- MongoDB
+# Lab. Assignment. MongoDB
+
+## The Dataset
+
+The dataset that we are using consists of 
+a MongoDB collection with 88 documents.
+Each document corresponds to a movie, described by 
+the following attributes: title, year,
+genre, summary, country,  director
+and actors.
+The value of the attribute director is  a document that describes
+an artist with the following attributes: first_name,
+last_name, birth_date and role.
+The value of the attribute actors is a list of 
+documents, each describing an artist.
+The values of all the other attributes are strings.
+
+# Preliminaries
+
+You will need to have Docker installed on your computer.
+If it is not the case, please [click on this link](https://store.docker.com/). 
 
 In order to use MongoDB, you will need to:
 
@@ -30,7 +50,7 @@ mkdir data
 Download the file moviesEmbedded.json and place it
 in the directory data.
 
-## Launch a MongoDB server
+### Launch a MongoDB server
 
 First, create a network, so as the client and the server can 
 communicate, with the following command.
@@ -45,7 +65,7 @@ Then launch a MongoDB server with the following command (make sure you are conne
 docker run -d --name mongodb-server --network app-tier bitnami/mongodb:latest
 ```
 
-## Import the data
+### Import the data
 
 In order to import the data, run the following command:
 
@@ -53,7 +73,7 @@ In order to import the data, run the following command:
 docker run --mount type=bind,source=data,target=/home/data -it --rm --network app-tier bitnami/mongodb:latest mongoimport --db movie --collection moviesEmbedded --drop --jsonArray --file  /home/data/moviesEmbedded.json  --host mongodb-server
 ```
 
-## Launch a MongoDB client
+### Launch a MongoDB client
 
 To launch a MongoDB client, run the following command:
 
