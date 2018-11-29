@@ -73,6 +73,8 @@ In order to import the data, run the following command:
 docker run --mount type=bind,source=data,target=/home/data -it --rm --network app-tier bitnami/mongodb:latest mongoimport --db movie --collection moviesEmbedded --drop --jsonArray --file  /home/data/moviesEmbedded.json  --host mongodb-server
 ```
 
+This will create a database named movie containing a collection named moviesEmbedded.
+
 ### Launch a MongoDB client
 
 To launch a MongoDB client, run the following command:
@@ -80,4 +82,29 @@ To launch a MongoDB client, run the following command:
 ```
 docker run -it --rm --network app-tier bitnami/mongodb:latest mongo --host mongodb-server
 ```
+
+The client is a simple command-line interface where you can type in the queries.
+
+## Queries
+
+By using the command-line interface of the client, type the following command to connect 
+to the database movie
+
+```
+use movie
+```
+
+Write and run the following queries:
+
+1. The movies titled "Gladiator".
+2. The distinct genre values of movies.
+3. The movies of "crime" or "drama" genre.
+4. The list of movies directed by "Hitchcock",display only title and year andsort them by year.
+5. The list of movies where "Cotillard" played.
+6. The movies released between 1967 and 1995.
+7. The list of the movies released between 1967 and 1995, by displaying only title, year, director’s last name sorted by year. 
+8. The number of movies by country.
+9. The number of movies by country and actor.
+
+
 
