@@ -1,4 +1,4 @@
-# Lab. Assignment. MongoDB
+# Lab Assignment. MongoDB
 
 ## The Dataset
 
