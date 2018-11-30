@@ -47,7 +47,7 @@ Create a new directory named data with the following command:
 mkdir data
 ```
 
-Download the file [moviesEmbedded.json](https://github.com/gquercini/mongodb-assignment/blob/master/moviesEmbedded.json) and place it
+Download the file [moviesEmbedded.json](https://raw.githubusercontent.com/gquercini/mongodb-assignment/master/moviesEmbedded.json) and place it
 in the directory data.
 
 ### Launch a MongoDB server
