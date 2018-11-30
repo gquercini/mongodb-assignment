@@ -13,9 +13,9 @@ an artist with the following attributes: first_name,
 last_name, birth_date and role.
 The value of the attribute actors is a list of 
 documents, each describing an artist.
-The values of all the other attributes are strings.
+The values of all the other attributes are strings.#
 
-# Preliminaries
+## Preliminaries
 
 You will need to have Docker installed on your computer.
 If it is not the case, please [click on this link](https://store.docker.com/). 
